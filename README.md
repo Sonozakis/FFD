@@ -22,7 +22,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 ## Opdracht 1 plan
 
-<details open>
+<details>
   <summary>uitwerken na schetsen idee (voor week 2)</summary>
 
 

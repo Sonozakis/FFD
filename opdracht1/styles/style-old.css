@@ -28,9 +28,7 @@ button:not[disabled], summary {
 /* CUSTOM PROPERTIES */
 /*********************/
 :root {
-	--main-font: 'postnl', sans-serif;
 	--main-text-color: hsl(235, 100%, 19%); 
-	--background-color: hsl(31, 90%, 49%);
 	--main-envelop: hsl(0, 0%, 100%);
 	--secondary-envelop: hsl(0, 0%, 95%);
 	--envelop-shadow: 		
@@ -38,9 +36,8 @@ button:not[disabled], summary {
 	hsla(240, 30%, 28%, 0.25) 0 3.125em 6.25em -1.25em, 
 	hsla(0, 0%, 0%, 0.13) 0 1.875em 60px -1.875em;
 	--brand-color: hsl(31, 90%, 49%);
-	--second-brand-color:hsl(0, 0%, 100%);
-	--third-brand-color: hsl(235, 100%, 19%);
-	--logo-background: linear-gradient(220deg, rgba(246,163,32,1) 20%, rgba(236,98,39,1) 100%);
+	--secondary-brand-color:hsl(0, 0%, 100%);
+	--logo-gradient: linear-gradient(220deg, rgba(246,163,32,1) 20%, rgba(236,98,39,1) 100%);
 	--logo-shadow: hsla(0, 0%, 39%, 0.2) 0 0.125em 0.5em 0;
 }
 
@@ -50,15 +47,12 @@ button:not[disabled], summary {
 /* JOUW STYLING */
 /****************/
 body {
-  font-family:var(--main-font);
+  font-family:'postnl', sans-serif;
   color:var(--main-text-color);
-  background-color:var(--background-color);
-	height: 98vh;
-	width: 98vw; 
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	position: relative;
+  background-color:var(--brand-color);
+
+	height: 100%;
+	width: 100%;
 }
 
 
@@ -71,12 +65,13 @@ body {
 body::before {
 	content: "";
 	position: absolute;
-  width: 35.1vw; 
-  height: 20vw; 
-	clip-path: polygon(49% 41%, 0% 100%, 100% 100%);
-  background-color: var(--secondary-envelop);
-	top: 25vw;
-	transform: scaleY(-1); 
+  width: 0; 
+  height: 0; 
+  border-left: 20em solid transparent;
+  border-right: 20em solid transparent;
+  border-top: 20em solid var(--secondary-envelop);
+	top: 30em;
+	right: 40em;
 	z-index: 3;
 	animation: envelop-open 5s 1s forwards;
 }
@@ -89,13 +84,13 @@ body::after {
 	justify-content: center;
 	text-align: center;
 	position: absolute;
-	width: 35vw;
-	height: 20vw;
-	top: 25vw;
+	width: 40em;
+	height: 25em;
+	top: 30em;
+	right: 40em;
 	z-index: 2;
 	background-color: var(--main-envelop);
 	box-shadow: var(--envelop-shadow);
-	font-size: 0.8em;
 }
 
 
@@ -108,17 +103,16 @@ body::after {
 h1::before {
 	content: "";
 	position: absolute;
-	height: 15vw;
-	width: 16vw;
-	border: 0.1em solid var(--second-brand-color);
+	height: 3.5em;
+	width: 3.5em;
+	border: 0.1em solid var(--secondary-brand-color);
 	border-radius: 78% 22% 16% 84% / 56% 47% 53% 44%;
 	top: -0.9em;
-	left: -0.4em;
+	left: -0.3em;
 	z-index: -1;
 	transform: scaleX(-1);
-	background: var(--logo-background);
+	background: var(--logo-gradient);
 	box-shadow: var(--logo-shadow);
-
 }
 
 /* Logo geheel */
@@ -127,12 +121,11 @@ h1 {
 	align-items: center;
 	justify-content: center;
 	position: absolute;
-	top: 7em;
-	left: 45%;
+	top: 5.5em;
+	right: 8.5em;
 	z-index: 1;
-	font-size: 4.4vw;
-	animation: pop-out 5s 1s forwards;	/* Zorgt ervoor dat de logo omhoog komt zodat hover mogelijk is */
-	color: var(--third-brand-color);
+	font-size: 6em;
+	animation: pop-out 5s 1s forwards; /* Zorgt ervoor dat de logo omhoog komt zodat hover mogelijk is */
 }
 
 /* Logo animation bij hover */
@@ -142,7 +135,7 @@ h1:hover {
 
 /* Het witte "NL" gedeelte van de logo */
 h1 span:nth-of-type(5), h1 span:nth-of-type(6) {
-	color: var(--second-brand-color);
+	color: var(--secondary-brand-color);
 }
 
 
@@ -159,12 +152,12 @@ span:nth-of-type(4)::after,
 span:nth-of-type(5)::after {
 	content: "";
 	position: absolute;
-	background-color: var(--second-brand-color);
+	background-color: var(--secondary-brand-color);
 }
 
 /*Lijn onder kroon*/
 span:nth-of-type(1)::after {
-	clip-path: inset(68% 0 0 0);
+	clip-path: inset(68% 0 0 0);;
 	width: 0.5em;
 	height: 0.3em;
 	left: 0.63em;
@@ -220,22 +213,22 @@ span:nth-of-type(5)::after {
 @keyframes envelop-open {
 	0% {
 		transform: 
-			scaleY(-1)
+			scaleY(1)
 			translateY(0);
 	}
 
 	5% {
-		z-index: -1; /* Zorgt ervoor dat de envelop opening naar de achtergrond gaat*/
 		transform: 
-			scaleY(1)
-			translateY(-20vw);
+			scaleY(-1)
+			translateY(20em);
+		z-index: -1; /* Zorgt ervoor dat de envelop opening naar de achtergrond gaat*/
 	}
 
 	100% {
-		z-index: -1;
 		transform: 
-			scaleY(1)
-			translateY(-20vw);
+			scaleY(-1)
+			translateY(20em);
+		z-index: -1;
 	}
 }
 
@@ -243,19 +236,19 @@ span:nth-of-type(5)::after {
 @keyframes pop-out {
 	0% {
 		transform: 
-			translateY(0) 
+			translateY(0em) 
 			rotate(10deg);
 	}
 
 	20% {
 		transform: 
-			translateY(-10vw) 
+			translateY(-2em) 
 			rotate(10deg);
 	}
 
 	100% {
 		transform: 
-			translateY(-10vw) 
+			translateY(-2em) 
 			rotate(10deg);
 	}
 }
@@ -264,133 +257,19 @@ span:nth-of-type(5)::after {
 @keyframes logo-out {
 	0% {
 		transform: 
-			translateY(-10vw) 
+			translateY(-2em) 
 			rotate(10deg);
 	}
 
 	20% {
 		transform: 
-			translateY(-23vw) 
+			translateY(-5em) 
 			rotate(10deg);
 	}
 
 	100% {
 		transform: 
-			translateY(-23vw) 
+			translateY(-5em) 
 			rotate(10deg);
-	}
-}
-
-
-
-/*******************/
-/* 	RESPONSIVENESS */
-/*******************/
-
-@media (min-width:27em) {
-	body::after {
-		font-size: 1em;
-	}
-}
-
-@media (min-width:50em) {
-	body::after {
-		font-size: 1.2em;
-	}
-}
-
-@media (min-width:75em) {
-	body::after {
-		font-size: 1.5em;
-	}
-}
-
-@media (min-width:100em) {
-	body::after {
-		font-size: 2em;
-	}
-}
-
-@media (min-width:250em) {
-	body::after {
-		font-size: 2.5em;
-	}
-}
-
-
-
-/**************/
-/* 	DARK MODE */
-/**************/
-
-/* PostNL iPhone app dark mode gebruikt als basis  */
-@media (prefers-color-scheme: dark) {
-	:root {
-		--background-color: hsl(0, 0%, 3%);
-		--main-text-color: hsl(33, 65%, 46%); 
-		--brand-color: hsl(33, 65%, 46%);
-		--second-brand-color:hsl(0, 0%, 14%);
-		--third-brand-color: hsl(0, 0%, 14%);
-		--logo-background: hsl(33, 65%, 46%);
-		--main-envelop: #202020;
-		--secondary-envelop: #181818;
-		--envelop-shadow: 		
-		hsla(0, 0%, 0%, 0.1) 0 0.0625em 0.0625em 0 inset, 
-		hsla(0, 0%, 0%, 0.25) 0 3.125em 6.25em -1.25em, 
-		hsla(0, 0%, 0%, 0.13) 0 1.875em 60px -1.875em;
-		--logo-shadow: hsla(0, 0%, 0%, 0.2) 0 0.125em 0.5em 0;
-	}
-
-	h1::before {
-		border: none;
-	}
-}
-
-
-/*******************/
-/* 	REDUCED MOTION */
-/*******************/
-
-@media (prefers-reduced-motion) {
-	/* Envelop al open */
-	body::before {
-		animation: none;
-		z-index: -1;
-		transform: 
-			scaleY(1)
-			translateY(-20vw);
-	}
-	
-	/* Minder animatie zodat er minder beweging is */
-	h1 {
-		animation: none;
-		top: 5em;
-		transform: rotate(10deg);
-	}
-
-	/* Bezier weggehaald voor een rustigere animatie */
-	h1:hover {
-		animation: logo-out 4s forwards;
-	}
-
-	/* Animatie vertraagd */
-	@keyframes logo-out {
-		0% {
-			transform: 
-				translateY(0) 
-				rotate(10deg);
-		}
-	
-		50% {
-			transform: 
-				translateY(-15vw) 
-				rotate(10deg);
-		}
-	
-		100% {
-			transform: 
-				translateY(-15vw) 
-				rotate(10deg);
-		}
 	}
 }

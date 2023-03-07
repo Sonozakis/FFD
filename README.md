@@ -14,7 +14,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
 ## Bronnenlijst
-  1. -bron 1-
+  1. Logo, kleurschema (dark+light) en font van opdracht 1: https://www.postnl.nl/
   2. -bron 2-
   3. -...-
 
@@ -27,16 +27,15 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
   ### Je storyboard:
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="storyboard voor opdracht 1">
+  <img src="readme-images/storyboard-opdr1.png" width="375px" alt="storyboard voor opdracht 1">
 
 
   ### Je ambitie: 
   Aan deze technieken/punten wil ik werken:
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
- 
+  - Ik wil graag leren om een mooie, professionele animatie te maken.
+  - Ik wil meer experimenteren met de bezier mogelijkheden binnen de animaties.
+  - Ik wil iets maken waar ik trots op ben.
+  - Ik wil responsiviteit onder de knie krijgen.
 </details>
 
 
@@ -53,12 +52,21 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Dit ging goed/Heb ik geleerd: 
   Korte omschrijving met plaatje(s)
+  - De logo namaken door middel van border-radius, gradient en clip-path.
+  - Gebruik maken van @font-face.
+  - Hoe je een driehoek maakt door middel van borders.
+  - Gradients gebruiken.
+  - Dark-mode.
+  - Custom properties.
 
   <img src="readme-images/dummy-plaatje.svg" width="375px" alt="top">
 
 
   ### Dit was lastig/Is niet gelukt:
   Korte omschrijving met plaatje(s)
+    - CSS coderen op basis van ontzettend simpele HTML code.
+    - Clip-path gebruiken om echt wat te tekenen.
+    - Responsiviteit.
 
   <img src="readme-images/dummy-plaatje.svg" width="375px" alt="bummer">
 </details>

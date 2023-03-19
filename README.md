@@ -22,7 +22,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 ## Opdracht 1 plan
 
-<details>
+<details open>
   <summary>uitwerken na schetsen idee (voor week 2)</summary>
 
 
@@ -47,29 +47,28 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
   ### Je uitkomst - karakteristiek screenshot(s):
-  <img src="readme-images/opdracht1.png" width="375px" alt="uitomst opdracht 1">
+  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="uitomst opdracht 1">
 
 
   ### Dit ging goed/Heb ik geleerd: 
   Korte omschrijving met plaatje(s)
-  - De logo namaken door middel van border-radius, gradient en clip-path was nieuw voor mij, maar is wel goed gegaan.
-  - Gebruik maken van @font-face was nieuw, maar het ging goed.
-  - Geleerd hoe je een driehoek maakt door middel van borders.
-  - Voor het eerst een gradient gebruiken.
-  - Dark-mode ging goed.
-  - Reduced motion ging goed.
-  - Custom properties gingen goed.
+  - De logo namaken door middel van border-radius, gradient en clip-path.
+  - Gebruik maken van @font-face.
+  - Hoe je een driehoek maakt door middel van borders.
+  - Gradients gebruiken.
+  - Dark-mode.
+  - Custom properties.
 
-  <img src="readme-images/goedopdr1.png" width="375px" alt="top">
+  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="top">
 
 
   ### Dit was lastig/Is niet gelukt:
   Korte omschrijving met plaatje(s)
-  - CSS coderen op basis van ontzettend simpele HTML code was een uitdaging.
-  - Clip-path gebruiken om echt wat te tekenen was lastig.
-  - Responsiviteit heb ik volgens mij echt helemaal verkeerd gedaan, maar ik kon zo last minute geen betere oplossing bedenken.
+    - CSS coderen op basis van ontzettend simpele HTML code.
+    - Clip-path gebruiken om echt wat te tekenen.
+    - Responsiviteit.
 
-  <img src="readme-images/slechtopdr1.png" width="375px" alt="bummer">
+  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="bummer">
 </details>
 
 

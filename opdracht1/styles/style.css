@@ -40,7 +40,7 @@ button:not[disabled], summary {
 	--brand-color: hsl(31, 90%, 49%);
 	--second-brand-color:hsl(0, 0%, 100%);
 	--third-brand-color: hsl(235, 100%, 19%);
-	--logo-background: linear-gradient(220deg, rgba(246,163,32,1) 20%, rgba(236,98,39,1) 100%);
+	--logo-background: linear-gradient(220deg, hsl(37, 92%, 55%) 20%, hsl(18, 84%, 54%) 100%);
 	--logo-shadow: hsla(0, 0%, 39%, 0.2) 0 0.125em 0.5em 0;
 }
 
@@ -53,12 +53,14 @@ body {
   font-family:var(--main-font);
   color:var(--main-text-color);
   background-color:var(--background-color);
-	height: 98vh;
-	width: 98vw; 
+	height: 100vh;
+	width: 100vw; 
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	position: relative;
+	margin: 0;
+	overflow: hidden;
 }
 
 

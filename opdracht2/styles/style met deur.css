@@ -60,11 +60,9 @@ body {
   color: var(--color-text);
 	margin: 0;
 	height: 100dvh;
-	overflow: hidden; 
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+	/* overflow: hidden;  */
+	display: grid;
+	place-items: center;
 	background-image: var(--background-image); 
 	background-repeat: repeat;
 }
@@ -79,13 +77,11 @@ header {
 	place-items: center;
 }
 
-/* Titel */
 h1 {
 	background-color: var(--ribbon-main);
 	padding: 0.8em;
 	border-radius: 0.18vw;
-	font-size: clamp(0.5vw, 2.5em, 2vw);
-	position: relative;
+	font-size: clamp(0.8vw, 2.5em, 2vw);
 }
 
 /* Strikje links en rechts opmaak */
@@ -94,8 +90,6 @@ h1::before, h1::after {
 	clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 0 100%, 0% 50%, 0 0);
 	background-color: var(--ribbon-shadow);
 	z-index: -1;
-	position: absolute;
-	top: -0.5vw;
 }
 
 /* Strikje links */
@@ -103,14 +97,12 @@ h1::before {
   width: 5vw; 
   height: 5vw; 
 	transform: scaleX(-1);
-	left: -4vw;
 }
 
 /* Strikje rechts */
 h1::after {
 	width: 5vw; 
   height: 5vw; 
-	right: -4vw;
 }
 
 
@@ -118,7 +110,6 @@ h1::after {
 /***********************/
 /* HUIS EN BINGO KAART */
 /***********************/
-/* Locatie van beide */
 main {
 	display: grid;
 	place-items: center;
@@ -130,12 +121,8 @@ main {
 /* VILLAGER HUIS */
 /*****************/
 /* Het huis zelf */
-main section {
-	position: relative;
-}
-
 main section button {
-	width: 33vw;
+	width: 30vw;
 	border: none;
 	background: none;
 }
@@ -162,33 +149,31 @@ main section button:active {
 
 /* Het huis binnen de button */
 main section button img {
-	width: 33vw;
+	width: 30vw;
 	padding: 1em;
-	animation: none;
+	animation: none !important;
+	position: static !important;
 }
 
 /* Haalt de opmaak van de lijst weg */
 main section section {
 	list-style: none;
-	position: absolute;
-	bottom: 5vw;
-	left: 16.5vw;
 }
 
 /* Villager binnen het huisje */
 main section section img {
-	height: 9vw;
-	width: 9vw;
-	animation: none;
+	height: 10vw;
+	width: 10vw !important;
+	animation: none !important;
 }
 
-/* Deur van het huis, weer toevoegen als html klopt */
-/* main section:nth-of-type(1) img {
+/* Deur van het huis, weer toevoegen als html klopt. Anders div gebruiken? */
+main section:nth-of-type(1) img {
 	animation: openDoor 2s forwards;
 	width: 30vw;
 	top: 2vw;
-	position: absolute; ADD RELATIVE TO PARENT OTHERWISE IT WONT STICK
-} */
+	position: absolute;
+}
 
 
 
@@ -210,9 +195,10 @@ ul {
   grid-template-rows: 20% 20% 20% 20% 20%;
 }
 
-/* Weghalen van originele lijst styling */
+/* Ordenen van bingo kaart */
 ul li {
-	list-style: none;
+	display: grid;
+	place-items: center;
 }
 
 /* Opmaak per villager vakje */
@@ -245,13 +231,11 @@ main ul li input:focus {
 	outline-style: solid;
 	outline-width: 0.3vw;
 	border-radius: 1vw;
-	position: absolute;
-	width: 5.8vw;
-	height: 5.8vw; /* waarschijnlijk dit aanpassen dmv lcoatie ipv width*/
 }
 
 /* Active state bij de li */
 main ul li input:active {
+	outline-style: solid;
 	transform: scale(0.95, 0.95);
 }
 
@@ -295,25 +279,8 @@ main ul li input:checked::after {
 /*******************/
 /* 	RESPONSIVENESS */
 /*******************/
-@media (min-width: 53em) {
-	header {
-		margin-bottom: 2vw;
-	}
-	
-	main {
-		display: flex;
-		flex-direction: row;
-	}
 
-	main section button {
-		margin-right: 5vw;
-	}
-
-	main ul {
-		margin-left: 5vw;
-	}
-}
-
+/* BIJ KLEINERE SCHERMEN ANDERE PADDING OP UL!!!!!!!!!!! */
 
 
 

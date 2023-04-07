@@ -115,7 +115,6 @@ h1::before {
 	transform: scaleX(-1);
 	background: var(--logo-background);
 	box-shadow: var(--logo-shadow);
-
 }
 
 /* Logo geheel */

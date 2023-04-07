@@ -82,9 +82,9 @@ header {
 /* Titel */
 h1 {
 	background-color: var(--ribbon-main);
-	padding: 0.8em;
-	border-radius: 0.18vw;
-	font-size: clamp(0.5vw, 2.5em, 2vw);
+	padding: 1.5vh;
+	border-radius: 0.18vh;
+	font-size: clamp(0.5vh, 2.5em, 1.8vh);
 	position: relative;
 }
 
@@ -95,22 +95,22 @@ h1::before, h1::after {
 	background-color: var(--ribbon-shadow);
 	z-index: -1;
 	position: absolute;
-	top: -0.5vw;
+	top: -0.5vh;
 }
 
 /* Strikje links */
 h1::before {
-  width: 5vw; 
-  height: 5vw; 
+  width: 5vh; 
+  height: 5vh; 
 	transform: scaleX(-1);
-	left: -4vw;
+	left: -4vh;
 }
 
 /* Strikje rechts */
 h1::after {
-	width: 5vw; 
-  height: 5vw; 
-	right: -4vw;
+	width: 5vh; 
+  height: 5vh; 
+	right: -4vh;
 }
 
 
@@ -135,7 +135,8 @@ main section {
 }
 
 main section button {
-	width: 33vw;
+	height: 33vh;
+	width: 33vh;
 	border: none;
 	background: none;
 }
@@ -149,9 +150,9 @@ main section button:hover {
 main section button:focus {
 	outline-color: var(--outline-color);
 	outline-style: solid;
-	outline-width: 0.3vw;
+	outline-width: 0.3vh;
 	background-color: var(--active-background);
-	border-radius: 1vw;
+	border-radius: 1vh;
 }
 
 /* Het huis bij de active state */
@@ -162,24 +163,23 @@ main section button:active {
 
 /* Het huis binnen de button */
 main section button img {
-	width: 33vw;
+	height: 33vh;
+	width: 33vh;
 	padding: 1em;
-	animation: none;
 }
 
 /* Haalt de opmaak van de lijst weg */
 main section section {
 	list-style: none;
 	position: absolute;
-	bottom: 5vw;
-	left: 16.5vw;
+	bottom: 5vh;
+	left: 16.4vh;
 }
 
 /* Villager binnen het huisje */
 main section section img {
-	height: 9vw;
-	width: 9vw;
-	animation: none;
+	height: 9vh;
+	width: 9vh;
 }
 
 /* Deur van het huis, weer toevoegen als html klopt */
@@ -199,11 +199,10 @@ main section section img {
 /* Bingo kaart in geheel */
 ul {
 	background-color: var(--main-color);
-	padding: 1vw;
-	border-radius: 1vw;
-	width: 35vw;
-	height: 35vw;
-
+	padding: 1vh;
+	border-radius: 1vh;
+	width: 35vh;
+	height: 35vh;
 	display: grid;
 	place-items: center;
   grid-template-columns: 20% 20% 20% 20% 20%;
@@ -217,19 +216,19 @@ ul li {
 
 /* Opmaak per villager vakje */
 main ul li img {
-	height: 6vw;
-	width: 6vw;
+	height: 6vh;
+	width: 6vh;
 	text-align: center;
 	background-color: var(--secondary-color);
-	border-radius: 1vw;
-	position: static;
+	border-radius: 1vh;
+	position: relative;
 }
 
 /* Haalt basis input opmaak weg en plaatst het op de goede plek */
 ul li input {
 	position: absolute;
-	width: 6vw;
-	height: 6vw;
+	width: 6vh;
+	height: 6vh;
 	appearance: none;
 	z-index: 2;
 }
@@ -243,11 +242,11 @@ main ul li input:hover {
 main ul li input:focus {
 	outline-color: var(--outline-color);
 	outline-style: solid;
-	outline-width: 0.3vw;
-	border-radius: 1vw;
+	outline-width: 0.3vh;
+	border-radius: 1vh;
 	position: absolute;
-	width: 5.8vw;
-	height: 5.8vw; /* waarschijnlijk dit aanpassen dmv lcoatie ipv width*/
+	width: 5.8vh;
+	height: 5.8vh; /* waarschijnlijk dit aanpassen dmv lcoatie ipv width*/
 }
 
 /* Active state bij de li */
@@ -260,8 +259,8 @@ main ul li input::after {
 	content: var(--leaf-overlay);
 	display: inline-block;
 	transform: scale(0.03);
-	width: 7vw;
-	height: 7vw;
+	width: 7vh;
+	height: 7vh;
 	opacity: 0;
 	position: absolute;
 }
@@ -299,7 +298,22 @@ main ul li input:checked::after {
 	header {
 		margin-bottom: 2vw;
 	}
+
+	header h1 {
+		padding: 1.5vw;
+	}
 	
+	header h1::before {
+		width: 5vw; 
+		height: 5vw; 
+	}
+	
+	/* Strikje rechts */
+	header h1::after {
+		width: 5vw; 
+		height: 5vw;
+	}
+
 	main {
 		display: flex;
 		flex-direction: row;
@@ -307,10 +321,49 @@ main ul li input:checked::after {
 
 	main section button {
 		margin-right: 5vw;
+		width: 33vw;
+	}
+
+	main sectionn button {
+		border-radius: 1vw;
+	}
+
+	main section button img {
+		width: 33vw;
+		padding: 1em;
+	}
+
+	main section section img {
+		height: 9vw;
+		width: 9vw;
 	}
 
 	main ul {
 		margin-left: 5vw;
+		width: 35vw;
+		height: 35vw;
+		padding: 1vw;
+	}
+
+	main ul li img {
+		height: 6vw;
+		width: 6vw;
+	}
+
+	main ul li input {
+		width: 6vw;
+		height: 6vw;
+	}
+
+	main ul li input:focus {
+		outline-width: 0.3vw;
+		width: 5.8vw;
+		height: 5.8vw;
+	}
+
+	main ul li input::after {
+		width: 7vw;
+		height: 7vw;
 	}
 }
 

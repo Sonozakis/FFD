@@ -1,0 +1,300 @@
+/*********/
+/* FONTS */
+/*********/
+@font-face {
+	font-family: 'acnhtitel';
+	src: url('../fonts/acnh-titel.woff2') format('woff2');
+			 /* url('../fonts/postnl.woff') format('woff'); */
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'acnh';
+	src: url('../fonts/acnh-font.woff2') format('woff2');
+			 /* url('../fonts/postnl.woff') format('woff'); */
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+
+/**************/
+/* CSS REMEDY */
+/**************/
+*, *::after, *::before {
+  box-sizing:border-box;  
+}
+
+button:not[disabled], summary {
+	cursor: pointer;
+}
+
+
+
+/*********************/
+/* CUSTOM PROPERTIES */
+/*********************/
+:root {
+	--color-text:hsl(37, 23%, 34%);
+	--main-color: hsl(143, 34%, 59%);
+	--secondary-color: hsl(115, 36%, 74%);
+	--ribbon-main: hsl(140, 100%, 97%);
+	--ribbon-shadow: hsl(139, 20%, 82%);
+	--outline-color: hsl(0, 0%, 100%);
+	--active-background: hsl(149, 35%, 56%);
+	--background-image: url("../images/acnh-bg.svg");
+	--leaf-overlay: url("../images/acnh-leaf.png");
+	--door: url("../images/acnh-house-door.png");
+
+	--main-font: 'acnhtitel', sans-serif;
+}
+
+
+
+/****************/
+/* JOUW STYLING */
+/****************/
+body {
+  font-family: var(--main-font);
+  color: var(--color-text);
+	margin: 0;
+	height: 100dvh;
+	/* overflow: hidden;  */
+	display: grid;
+	place-items: center;
+	background-image: var(--background-image); 
+	background-repeat: repeat;
+}
+
+/*********/
+/* TITEL */
+/*********/
+
+/* Basis van strikje */
+header {
+	display: grid;
+	place-items: center;
+}
+
+h1 {
+	background-color: var(--ribbon-main);
+	padding: 0.8em;
+	border-radius: 0.18vw;
+	font-size: clamp(0.8vw, 2.5em, 2vw);
+}
+
+/* Strikje links en rechts opmaak */
+h1::before, h1::after {
+	content: "";
+	clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 0 100%, 0% 50%, 0 0);
+	background-color: var(--ribbon-shadow);
+	z-index: -1;
+}
+
+/* Strikje links */
+h1::before {
+  width: 5vw; 
+  height: 5vw; 
+	transform: scaleX(-1);
+}
+
+/* Strikje rechts */
+h1::after {
+	width: 5vw; 
+  height: 5vw; 
+}
+
+
+
+/***********************/
+/* HUIS EN BINGO KAART */
+/***********************/
+main {
+	display: grid;
+	place-items: center;
+}
+
+
+
+/*****************/
+/* VILLAGER HUIS */
+/*****************/
+/* Het huis zelf */
+main section button {
+	width: 30vw;
+	border: none;
+	background: none;
+}
+
+/* Het huis bij de hover state */
+main section button:hover {
+	cursor: pointer;
+}
+
+/* Het huis bij de focus state */
+main section button:focus {
+	outline-color: var(--outline-color);
+	outline-style: solid;
+	outline-width: 0.3vw;
+	background-color: var(--active-background);
+	border-radius: 1vw;
+}
+
+/* Het huis bij de active state */
+main section button:active {
+	outline-style: solid;
+	transform: scale(0.95, 0.95);
+}
+
+/* Het huis binnen de button */
+main section button img {
+	width: 30vw;
+	padding: 1em;
+	animation: none !important;
+	position: static !important;
+}
+
+/* Haalt de opmaak van de lijst weg */
+main section section {
+	list-style: none;
+}
+
+/* Villager binnen het huisje */
+main section section img {
+	height: 10vw;
+	width: 10vw !important;
+	animation: none !important;
+}
+
+/* Deur van het huis, weer toevoegen als html klopt. Anders div gebruiken? */
+main section:nth-of-type(1) img {
+	animation: openDoor 2s forwards;
+	width: 30vw;
+	top: 2vw;
+	position: absolute;
+}
+
+
+
+/***************/
+/* BINGO KAART */
+/***************/
+
+/* Bingo kaart in geheel */
+ul {
+	background-color: var(--main-color);
+	padding: 1vw;
+	border-radius: 1vw;
+	width: 35vw;
+	height: 35vw;
+
+	display: grid;
+	place-items: center;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-template-rows: 20% 20% 20% 20% 20%;
+}
+
+/* Ordenen van bingo kaart */
+ul li {
+	display: grid;
+	place-items: center;
+}
+
+/* Opmaak per villager vakje */
+main ul li img {
+	height: 6vw;
+	width: 6vw;
+	text-align: center;
+	background-color: var(--secondary-color);
+	border-radius: 1vw;
+	position: static;
+}
+
+/* Haalt basis input opmaak weg en plaatst het op de goede plek */
+ul li input {
+	position: absolute;
+	width: 6vw;
+	height: 6vw;
+	appearance: none;
+	z-index: 2;
+}
+
+/* Hover state bij de li */
+main ul li input:hover {
+	cursor: pointer;
+}
+
+/* Focus state bij de li */
+main ul li input:focus {
+	outline-color: var(--outline-color);
+	outline-style: solid;
+	outline-width: 0.3vw;
+	border-radius: 1vw;
+}
+
+/* Active state bij de li */
+main ul li input:active {
+	outline-style: solid;
+	transform: scale(0.95, 0.95);
+}
+
+/* Plaatst vakje over de li */
+main ul li input::after {
+	content: var(--leaf-overlay);
+	display: inline-block;
+	transform: scale(0.03);
+	width: 7vw;
+	height: 7vw;
+	opacity: 0;
+	position: absolute;
+}
+
+/* Zet de opacity aan als deze is aangevinkt */
+main ul li input:checked::after {
+	opacity: 1;
+}
+
+
+
+/***************/
+/* 	ANIMATIONS */
+/***************/
+
+/* Animatie van deur */
+@keyframes openDoor {
+	0% {
+		width: 30vw;
+		height: 27vw;
+	}
+
+	100% {
+		width: 5vw;
+		height: 27vw;
+	}
+}
+
+
+
+/*******************/
+/* 	RESPONSIVENESS */
+/*******************/
+
+/* BIJ KLEINERE SCHERMEN ANDERE PADDING OP UL!!!!!!!!!!! */
+
+
+
+/**************/
+/* 	DARK MODE */
+/**************/
+@media (prefers-color-scheme: dark) {
+	:root {
+		--color-text: hsl(136, 20%, 82%);
+		--main-color: hsl(169, 26%, 25%);
+		--secondary-color: hsl(169, 29%, 19%);
+		--ribbon-main: hsl(169, 26%, 25%);
+		--ribbon-shadow: hsl(169, 29%, 19%);
+		--background-image: url("../images/acnh-bg-dark.svg");
+		--leaf-overlay: url("../images/acnh-leaf-dark.png");
+	}
+}

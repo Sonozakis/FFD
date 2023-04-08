@@ -25,6 +25,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   9. Basis van API in HTML doen, opdracht 2: https://codepen.io/shooft/pen/OJovVev  
   10. Tutorial voor observer, opdracht 2: https://www.youtube.com/watch?v=_5Bu3JY-ZHc 
   11. Animal Crossing leaf voor de afvink overlay, opdracht 2: https://commons.wikimedia.org/wiki/File:Animal_Crossing_Leaf.svg 
+  12. Babs voor de API hulp, odpracht 2.
 
 
 
@@ -116,59 +117,62 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Bevinding 1:
   Responsiviteit is nog niet goed.
-    <img src="readme-images/opdracht2-testen1.png" width="375px" alt="bevinding 1">
+  <img src="readme-images/opdracht2-testen1.png" width="375px" alt="bevinding 1">
 
   #### oplossing:
   De responsiviteit was niet goed, omdat ik op een groot scherm begon in plaats van een kleine. Ik heb de CSS herschreven en nu is de responsiviteit wel goed.
-  FOTO TOEVOEGEN!!!!
+  <img src="readme-images/opdracht2-oplossing1-1.png" width="375px" alt="oplossing 1 deel 1">
+  <img src="readme-images/opdracht2-oplossing1-2.png" width="375px" alt="oplossing 1 deel 2">
 
 
 
   ### Bevinding 2:
   De villager uit het huisje oproepen gaat nog mis.
-    <img src="readme-images/opdracht2-testen2.png" width="375px" alt="bevinding 2">
+  <img src="readme-images/opdracht2-testen2.png" width="375px" alt="bevinding 2">
 
   #### oplossing:
   Sanne heeft de functie voor mij verbeterd, waardoor het oproepen nu goed gaat.
-  FOTO TOEVOEGEN!!!!!
+  <img src="readme-images/opdracht2-oplossing2.png" width="375px" alt="oplossing 2">
 
 
 
   ### Bevinding 3:
   Nog niet overal toetsenbord bediening. Het huisje dat als button dient heeft hier vooral last van.
-   <img src="readme-images/opdracht2-testen3.png" width="375px" alt="bevinding 3">
+  <img src="readme-images/opdracht2-testen3.png" width="375px" alt="bevinding 3">
 
   #### oplossing:
   De img van het huisje dat de knop is plaatsen binnen een button, dan kan je het selecteren met tab, net zoals de rest van de elementen op de pagina.
-    <img src="readme-images/opdracht2-oplossing3.png" width="375px" alt="oplossing 3">
+  <img src="readme-images/opdracht2-oplossing3.png" width="375px" alt="oplossing 3">
 
 
 
   ### Bevinding 4:
   If else code werkt nog niet.
-    <img src="readme-images/opdracht2-testen4.png" width="375px" alt="bevinding 4">
+  <img src="readme-images/opdracht2-testen4.png" width="375px" alt="bevinding 4">
 
   #### oplossing:
   If else was onnodig. Sanne heeft mij geholpen en de gebruikte functie voor mij verbeterd, waardoor de button werkt zonder if else statement.
-    <img src="readme-images/opdracht2-oplossing4.png" width="375px" alt="oplossing 4">
+  <img src="readme-images/opdracht2-oplossing4.png" width="375px" alt="oplossing 4">
+
+
 
   ### Bevinding 5:
   Op kleinere schermen staat het bingo bord scheef.
-    <img src="readme-images/opdracht2-testen5.png" width="375px" alt="bevinding 5">
+  <img src="readme-images/opdracht2-testen5.png" width="375px" alt="bevinding 5">
 
   #### oplossing:
   Ik heb hier samen met Sanne naar gekeken en het probleem was de padding. Nu deze weg is, staat het bingo bord goed.
-  FOTO TOEVOEGEN!!!!
+  <img src="readme-images/opdracht2-oplossing5.png" width="375px" alt="oplossing 5">
+
+
 
   ### Bevinding 6:
   Nog geen hover, focus en active states op de interactieve elementen.
-  FOTO TOEVOEGEN!!!!
 
   #### oplossing:
   Ik heb al deze states nu toegevoegd. 
-  FOTO'S TOEVOEGEN!!!!
-
-
+  <img src="readme-images/opdracht2-oplossing6-1.png" width="375px" alt="oplossing 6 deel 1">
+  <img src="readme-images/opdracht2-oplossing6-2.png" width="375px" alt="oplossing 6 deel 2">
 </details>
 
 
@@ -184,12 +188,21 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Dit ging goed/Heb ik geleerd: 
   Korte omschrijving met plaatje(s)
+  - Toen ik responsiviteit opnieuw aanpakte ging dit eigenlijk best soepel.
+  - Ik ben tevreden met de lay-out en het ontwerp. Lekker simpel, maar past wel bij Animal Crossing.
+  - Het feit dat ik mijn Javascript aan de praat heb gekregen is een wonder.
+  - Ik snap nu hoe API's oproepen werkt met dank aan Babs.
+  - Ik heb een hoop nieuwe Javascript code geleerd.
+  - Ik heb een hoop nieuwe CSS-properties leren kennen.
 
   <img src="readme-images/dummy-plaatje.svg" width="375px" alt="top">
 
 
   ### Dit was lastig/Is niet gelukt:
   Korte omschrijving met plaatje(s)
+  - Ik had gewild dat ik mijn Javascript complexer had gemaakt. Maar helaas is en blijft Javascript mijn grootste vijand, dus ik moet er beter in worden voordat ik te ambitieus word.
+  - Responsiviteit ging in eerste instantie niet zo lekker. Hopelijk heb ik mijn les geleerd om gewoon klein te beginnen vanaf nu, want dat scheelt een hoop werk.
+  - Objecten centreren werkte soms niet mee door de label en input, dit is uiteindelijk wel gelukt gelukkig.
 
   <img src="readme-images/dummy-plaatje.svg" width="375px" alt="bummer">
 </details>

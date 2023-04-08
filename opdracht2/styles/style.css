@@ -166,14 +166,18 @@ main section button img {
 main section section {
 	list-style: none;
 	position: absolute;
-	bottom: 10vw;
-	left: 32vw;
+	bottom: 14vw;
+	left: 33vw;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 /* Villager binnen het huisje */
 main section section img {
-	height: 20vw;
-	width: 20vw;
+	height: 17vw;
+	width: 17vw;
 }
 
 /* Deur van het huis, weer toevoegen als html klopt */

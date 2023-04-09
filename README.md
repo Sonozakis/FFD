@@ -19,13 +19,14 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   3. Clip-path generator, opdracht 1 en 2: https://bennettfeely.com/clippy/ 
   4. Achtergrond voor binnenkant van het huis, opdracht 2: https://nl.pinterest.com/pin/414683078192970052/ 
   5. Buitenkant van het huis, opdracht 2: https://animalcrossingworld.com/guides/new-horizons/villager-house-exterior-designs-complete-list/
-  6. Originele foto van het achtergrond, ik heb hem zelf wel scherper gemaakt in Illustrator, opdracht 2: https://www.animal-crossing.com/new-horizons/ 
+  6. Originele foto van het achtergrond en gebruikte, ik heb hem zelf wel scherper gemaakt in Illustrator + gebruikte font opdracht 2: https://www.animal-crossing.com/new-horizons/ 
   7. Array shuffle, opdracht 2: https://www.w3docs.com/snippets/javascript/how-to-randomize-shuffle-a-javascript-array.html  
   8. Slice in de shuffle, opdracht 2: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice
   9. Basis van API in HTML doen, opdracht 2: https://codepen.io/shooft/pen/OJovVev  
   10. Tutorial voor observer, opdracht 2: https://www.youtube.com/watch?v=_5Bu3JY-ZHc 
   11. Animal Crossing leaf voor de afvink overlay, opdracht 2: https://commons.wikimedia.org/wiki/File:Animal_Crossing_Leaf.svg 
   12. Babs voor de API hulp, odpracht 2.
+  13. Geluidje dat afspeelt als de villager in de deur ook in de bingo kaart zit, zelf bijgeknipt, opdracht 2: https://www.youtube.com/watch?v=6Nlpu3fdVnU 
 
 
 

@@ -389,7 +389,7 @@ main ul li img {
 		width: 33vh;
 		height: 31vh;
 		top: 1.1vh;
-		left: 0.3vh;
+		left: 0.4vh;
 	}
 
 	main section section {
@@ -435,8 +435,6 @@ main ul li img {
 		border-radius: 1vh;
 	}
 }
-
-
 
 /* Grote schermen */
 @media (min-width: 53em) {
@@ -511,7 +509,7 @@ main ul li img {
 		width: 28vw;
 		height: 26vw;
 		top: 1vw;
-		left: 0vw;
+		left: 0.2vw;
 	}
 
 	main section section {

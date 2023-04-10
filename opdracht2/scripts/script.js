@@ -152,7 +152,7 @@ if ('webkitSpeechRecognition' in window) {
 		` 
       <h1>Je hebt gewonnen!</h1> 
 			<img src="./images/isabelle-happy.gif" alt="Isabelle die aan het klappen is.">
-			<a href="/opdracht2/">Klik hier om opnieuw te spelen</a>
+			<a href="/FFD/opdracht2/">Klik hier om opnieuw te spelen</a>
     `; 
 
 		everything.innerHTML = win; // Replaced de section

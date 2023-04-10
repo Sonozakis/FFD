@@ -27,6 +27,9 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   11. Animal Crossing leaf voor de afvink overlay, opdracht 2: https://commons.wikimedia.org/wiki/File:Animal_Crossing_Leaf.svg 
   12. Babs voor de API hulp, odpracht 2.
   13. Geluidje dat afspeelt als de villager in de deur ook in de bingo kaart zit, zelf bijgeknipt, opdracht 2: https://www.youtube.com/watch?v=6Nlpu3fdVnU 
+  14. Speech API code basis, opdracht 2: https://dev.to/joelbonetr/speech-recognition-with-javascript-59g1 en https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API 
+  15. Tweede Animal Crossing font, opdracht 2: https://www.dafontfree.co/downloads/animal-crossing/ 
+  16. Blije Isabelle, opdracht 2: https://shinobi-bacon.tumblr.com/post/188998681253/i-learned-how-to-make-transparent-gifs-using-after?is_related_post=1 
 
 
 
@@ -184,7 +187,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken bij afronden opdracht (voor week 8)</summary>
 
   ### Je uitkomst - karakteristiek screenshot(s):
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="uitkomst opdracht 2">
+  <img src="readme-images/opdracht2.png" width="375px" alt="uitkomst opdracht 2">
 
 
   ### Dit ging goed/Heb ik geleerd: 
@@ -196,7 +199,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   - Ik heb een hoop nieuwe Javascript code geleerd.
   - Ik heb een hoop nieuwe CSS-properties leren kennen.
 
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="top">
+  <img src="readme-images/goedopdr2.png" width="375px" alt="top">
 
 
   ### Dit was lastig/Is niet gelukt:
@@ -204,6 +207,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   - Ik had gewild dat ik mijn Javascript complexer had gemaakt. Maar helaas is en blijft Javascript mijn grootste vijand, dus ik moet er beter in worden voordat ik te ambitieus word.
   - Responsiviteit ging in eerste instantie niet zo lekker. Hopelijk heb ik mijn les geleerd om gewoon klein te beginnen vanaf nu, want dat scheelt een hoop werk.
   - Objecten centreren werkte soms niet mee door de label en input, dit is uiteindelijk wel gelukt gelukkig.
+  - Ik wilde graag de Javascript laten herkennen wanneer de gebruiker een bingo heeft door middel van de checkboxes in de li, maar ik heb het helaas niet aan de praat gekregen. Ik heb dit nu door middel van de Speech API gedaan, maar gebruikers die een browser gebruiken die dit niet ondersteund kunnen nu dus niet winnen. Daarnaast zou ik dan ook de Speech API pas kunnen laten luisteren als er 5 checkboxes zijn aangevinkt, in plaats van constant.
+  - Speech API aan het werk krijgen vond ik ook niet zo leuk, maar het is wel uiteindelijk gelukt gelukkig.
 
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="bummer">
+  <img src="readme-images/slechtopdr2.png" width="375px" alt="bummer">
 </details>

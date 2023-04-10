@@ -66,9 +66,8 @@ function showVillagersCard() {
 					`;
 		listCard.insertAdjacentHTML('beforeend', villagerCard); // Plaatst het in de UL
 	})
-
-	listCard.addEventListener('click', checkWin);
 }
+
 // Zorgt ervoor dat bij refreshen het bord al klaarstaat
 getVillagerCard();
 
@@ -109,11 +108,13 @@ function showVillagersHouse() {
 }
 
 
+
 // FUNCTIES ON CLICK
 // Genereert een willekeurige villager in het huis 
 button.addEventListener("click", () => {
     getVillagerHouse();
 });
+
 
 
 // FETCH DATA
@@ -123,4 +124,42 @@ async function getData(URL) {
 		.then ( response => response.json() )
 		.then ( jsonData => jsonData )
 	);
+}
+
+
+
+// SPEECH API -> testen met Chrome, Firefox support het niet
+// Bron voor dit stukje code: https://dev.to/joelbonetr/speech-recognition-with-javascript-59g1 
+// Controleert of de browser speech recognition ondersteund
+if ('webkitSpeechRecognition' in window) {
+  var recognition = new window.webkitSpeechRecognition();
+
+  recognition.lang = 'nl-NL'; // Herkende taal = Nederlands
+  recognition.continuous = true; // // Blijft constant luisteren, bingo kan op elk moment gebeuren
+
+  // Begint met luisteren
+  recognition.start();
+
+  recognition.onresult = event => {
+    const result = event.results[event.results.length - 1][0].transcript;
+    console.log(result); // Schrijft in de console wat de gebruiker zegt
+
+    if (result.toLowerCase() === 'bingo') { // Checkt of de gebruiker "bingo" zegt
+			const everything = document.querySelector("body") // Selecteert alles in HTML
+			
+			// Nieuwe body voor als de gebruiker wint
+			const win = 
+		` 
+      <h1>Je hebt gewonnen!</h1> 
+			<img src="./images/isabelle-happy.gif" alt="Isabelle die aan het klappen is.">
+			<a href="/opdracht2/">Klik hier om opnieuw te spelen</a>
+    `; 
+
+		everything.innerHTML = win; // Replaced de section
+			}
+    }
+
+} else { // Melding als de browser de speech recognition niet ondersteund
+  console.error('Speech recognition wordt niet ondersteund binnen deze browser.'); 
+	// Door .error in plaats van .log te gebruiken is de melding rood in de console
 }
